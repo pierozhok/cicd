@@ -29,6 +29,13 @@ pipeline {
 		mvn test
 		'''
             }
+	   post {
+		always {
+			recordIssues(
+			tools: [junitParser(pattern: '**/test-results.xml')]
+			)
+			}
+		}
         }
     }
 
