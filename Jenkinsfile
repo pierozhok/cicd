@@ -15,7 +15,7 @@ pipeline {
                 sh 'docker build -t $IMAGE_REPO:$TAG-$GIT_COMMIT -t $IMAGE_REPO:latest ./'
             }
         }
-    }
+    
 
        stage('Test') {
 	   agent{
@@ -31,7 +31,7 @@ pipeline {
 		'''
             }
         }
-    
+    }
 
 }
 
