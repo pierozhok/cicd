@@ -20,14 +20,13 @@ pipeline {
        stage('Test') {
 	   agent{
 		docker{
-			image 'node:14-alpine'
+			image 'maven:3-alpine'
 			label 'docker'
 }
 }
            steps {
                 sh '''
-		npm ci
-		npm test
+		mvn test
 		'''
             }
         }
