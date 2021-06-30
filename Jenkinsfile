@@ -4,7 +4,6 @@ pipeline {
     }
     
     environment {
-        IMAGE_REPO = './'
         TAG = '1.0.0'
     }
 
